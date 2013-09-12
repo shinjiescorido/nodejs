@@ -12,7 +12,7 @@ prject includes:
 
 dependencies:
 
--express
--mongoose
--ejs
+- express
+- mongoose
+- ejs
 

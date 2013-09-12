@@ -1,0 +1,28 @@
+		<%
+			if(!usermail){
+		%>
+		
+		
+		<form class="form-signin" action="/" method="post" onsubmit='return validater("ddd");' accept-charset="utf-8">
+		<div id="errmsgs" class="alert alert-danger"><%= error %></div>
+				 <h2 class="form-signin-heading">Please sign in</h2>
+				<input name="email" id="email" type="text" class="form-control" placeholder="Email address" autofocus>				
+				<br />
+				 <input name="pword" id="pword" type="password" class="form-control" placeholder="Password"><br />
+				 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+				
+			</form>
+		<% }else{ %>
+		
+		
+			<form class="form-signin" action="/update" method="post" onsubmit='return true;' accept-charset="utf-8">
+			 <h2 class="form-signin-heading">Profile Information</h2>
+				Email: <%= usermail %>	<br /><br />
+				<input name="first_name" id="first_name" value="<%= logs.first_name %>" class="form-control" placeholder="First Name" autofocus /><br />
+		
+				<input name="last_name" id="last_name" value="<%= logs.last_name %>" class="form-control" placeholder="Last Name" /><br />
+				
+				<input name="epword" id="epword" type="password" value="" class="form-control" placeholder="Password" /><br />
+				 <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+			</form>
+		<% } %>

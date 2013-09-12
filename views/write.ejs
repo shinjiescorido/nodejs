@@ -1,0 +1,29 @@
+ <h2 class="form-signin-heading">BLOG PAGE</h2><HR/>
+ <div class="row">	
+		<% posts.forEach( function ( todo ){ %>
+		 <div class="col-lg-4">
+				  <h2><%= todo.title %></h2>
+				  <small><a href="#"> by: <%= todo.author %></a></small>
+				  <p> <%= todo.body %></p>
+				  <p><a class="btn btn-default" href="/blog/<%= todo.id %>">View details &raquo;</a></p>
+				</div>
+		<% }); %>
+	</div>
+<%
+			if(usermail){
+%>
+	 
+       
+
+	
+
+	<form class="form-signin" action="/blog" method="post" onsubmit='return postvalidater("D");' accept-charset="utf-8">
+			 <div id="errmsgs" class="alert alert-danger"><%= error %></div>
+			 <h2 class="form-signin-heading">Post a Blog</h2>
+				
+				<input name="title" id="title" class="form-control" placeholder="title" autofocus /><br />		
+				<textarea name="content" id="content" class="form-control" placeholder="content"></textarea>
+				<br />						
+				 <button class="btn btn-lg btn-primary btn-block" type="submit">Post now</button>
+			</form>
+		<% } %>

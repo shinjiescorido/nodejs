@@ -1,0 +1,11 @@
+{
+  "name"         : "todo",
+  "version"      : "0.0.1",
+  "private"      : true,
+  "dependencies" : {
+    "connect"  : "1.8.7",
+    "express"  : "2.5.11",
+    "ejs"      : "0.8.3",
+    "mongoose" : "3.3.1"
+  }
+}

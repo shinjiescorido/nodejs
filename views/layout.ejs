@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
 
     <title>SINET TRAINING PROJECT</title>
 
@@ -32,7 +32,7 @@
 		<% }else{ %>
 		logged in as <%= usermail %>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/logout">logout</a>
 		<% } %>
-		
+
 	</div>
     <!-- Wrap all page content here -->
     <div id="wrap">
@@ -58,11 +58,11 @@
 			if(!usermail){
 		%>
 		<li><a href="/">login</a></li>
-		
+
 		<li><a href="/reg">register</a></li>
 		<% }else{ %>
 		<li><a href="/">logged in as <%= usermail %></a></li>
-		
+
 		<li><a href="/logout">logout</a></li>
 		<% } %>
           </ul>
@@ -88,6 +88,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
-	<script src="/javascripts/helper.js"></script>  
+	<script src="/javascripts/helper.js"></script>
   </body>
 </html>
